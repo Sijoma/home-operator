@@ -68,7 +68,7 @@ Now edit the CRD, and turn the field `power` to `false`. Describe it again.
 
 You can also take a look at the MQTT message by port-forwarding the service. 
 Then you need to subscribe to the topic `home/kitchen/coffee/+/power`. This can be 
-done for example with a tool like MQTTX.
+done for example with a tool like [MQTTX](https://mqttx.app/).
 ```bash
 kubectl port-forward -n mqtt svc/mosquitto 1883
 ```
