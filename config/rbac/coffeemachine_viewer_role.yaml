@@ -1,0 +1,27 @@
+# permissions for end users to view coffeemachines.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: coffeemachine-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: home-operator
+    app.kubernetes.io/part-of: home-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: coffeemachine-viewer-role
+rules:
+- apiGroups:
+  - appliances.home.sijoma.dev
+  resources:
+  - coffeemachines
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - appliances.home.sijoma.dev
+  resources:
+  - coffeemachines/status
+  verbs:
+  - get

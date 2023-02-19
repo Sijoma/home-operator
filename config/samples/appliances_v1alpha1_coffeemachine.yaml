@@ -1,0 +1,7 @@
+apiVersion: appliances.home.sijoma.dev/v1alpha1
+kind: CoffeeMachine
+metadata:
+  name: my-machine
+  namespace: default
+spec:
+  power: true

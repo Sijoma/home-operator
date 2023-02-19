@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- appliances_v1alpha1_coffeemachine.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

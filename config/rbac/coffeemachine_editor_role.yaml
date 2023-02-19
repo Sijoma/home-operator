@@ -1,0 +1,31 @@
+# permissions for end users to edit coffeemachines.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: coffeemachine-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: home-operator
+    app.kubernetes.io/part-of: home-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: coffeemachine-editor-role
+rules:
+- apiGroups:
+  - appliances.home.sijoma.dev
+  resources:
+  - coffeemachines
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - appliances.home.sijoma.dev
+  resources:
+  - coffeemachines/status
+  verbs:
+  - get
