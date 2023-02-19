@@ -73,7 +73,7 @@ done for example with a tool like MQTTX.
 kubectl port-forward -n mqtt svc/mosquitto 1883
 ```
 
-![Coffee](docs/mqtt-topic.jpg)
+![Mqtt Example](docs/mqtt-topic.png)
 <p style="text-align: center;">We tried to override the desired state by sending a manual mqtt message. The operator acted swiftly and turned the coffee machine back on (last message).</p>
 
 
