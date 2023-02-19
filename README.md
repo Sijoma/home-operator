@@ -72,6 +72,12 @@ done for example with a tool like MQTTX.
 ```bash
 kubectl port-forward -n mqtt svc/mosquitto 1883
 ```
+
+![Coffee](docs/mqtt-topic.jpg)
+<p style="text-align: center;">We tried to override the desired state by sending a manual mqtt message. The operator acted swiftly and turned the coffee machine back on (last message).</p>
+
+
+
 ## Getting Started
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
 **Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
